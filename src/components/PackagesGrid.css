@@ -9,16 +9,44 @@
   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 
-.grid-image-container { position: relative; height: 200px; overflow: hidden; }
-.grid-carousel { height: 100%; }
+.grid-image-container { 
+  position: relative; 
+  height: 200px; 
+  overflow: hidden; 
+}
+.grid-carousel { 
+  height: 100%; 
+  position: relative;
+}
 .grid-carousel-image { height: 200px; background-size: cover; background-position: center; }
 
 /* smaller controls for per-card carousels */
 .grid-carousel .carousel-control-prev,
 .grid-carousel .carousel-control-next {
+  position: absolute;
   width: 20px;
   height: 20px;
   background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.grid-carousel .carousel-control-prev {
+  left: 5px;
+}
+
+.grid-carousel .carousel-control-next {
+  right: 5px;
+}
+
+.grid-carousel .carousel-control-prev:hover,
+.grid-carousel .carousel-control-next:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-50%) scale(1.1);
 }
 
 .grid-carousel .carousel-control-prev-icon,
