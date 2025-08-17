@@ -1,0 +1,226 @@
+.hero-section {
+  position: relative;
+  height: 50vh; /* reduced from 55vh to 50vh */
+  min-height: 400px; /* reduced from 450px to 400px */
+  display: flex;
+  align-items: center; /* restored center alignment */
+  padding-top: 0; /* no offset so true vertical centering */
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-image: url('../victoria-falls-national.jpg'); /* local waterfall image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* restored center alignment */
+  padding-top: 0; /* removed padding-top */
+  padding-bottom: 0; /* removed padding-bottom completely */
+}
+
+.hero-title {
+  font-size: 4.8rem; /* +50% */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #FF7D00;
+}
+
+.hero-search {
+  margin-bottom: 2rem;
+}
+
+.search-input-group {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.search-input-group::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  border-radius: 25px;
+  z-index: -1;
+}
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 0 1rem;
+  background: #ffffff;
+}
+
+.hero-search .search-input {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 1rem 0;
+  background: #ffffff;
+  flex: 1;
+  color: #000000;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.hero-search .search-input:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+
+.hero-search .search-input:focus-visible {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+.hero-search .search-input::-webkit-focus-inner {
+  border: 0;
+  outline: 0;
+}
+
+.hero-search .search-input::placeholder {
+  color: #000000;
+  opacity: 0.6;
+}
+
+.hero-search .search-input::selection {
+  background: transparent;
+}
+
+.hero-search .search-input::-moz-selection {
+  background: transparent;
+}
+
+.search-icon {
+  color: #156163;
+  margin-right: 0.75rem;
+  font-size: 1.1rem;
+  filter: none;
+}
+
+.hero-search .search-button {
+  background-color: #156163;
+  border-color: #156163;
+  border-radius: 25px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-left: 1px solid #e9ecef;
+}
+
+.hero-search .search-button:hover {
+  background-color: #0f4a4c;
+  border-color: #0f4a4c;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(21, 97, 99, 0.3);
+}
+
+.hero-buttons {
+  margin-bottom: 0.5rem; /* reduced from 1rem to 0.5rem */
+}
+
+.cta-button {
+  background-color: #FF7D00 !important;
+  border-color: #FF7D00 !important;
+  padding: 0.45rem 0.9rem; /* slightly narrower */
+  font-weight: 600;
+  transition: all 0.3s ease;
+  min-width: 140px; /* reduced width */
+  border-radius: 999px; /* fully rounded corners */
+}
+
+.cta-button:hover {
+  background-color: #e67000 !important;
+  border-color: #e67000 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 125, 0, 0.3);
+}
+
+.play-button {
+  border-width: 2px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.play-button:hover {
+  background-color: white;
+  color: #333;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 60vh;
+    min-height: 420px;
+    padding-top: 0;
+    align-items: center;
+  }
+  .hero-title {
+    font-size: 3.75rem; /* +50% */
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    height: 55vh;
+    min-height: 380px;
+    padding-top: 0;
+    align-items: center;
+  }
+  .hero-title {
+    font-size: 3rem; /* +50% */
+  }
+  
+} 

@@ -1,0 +1,288 @@
+.packages-grid-section {
+  padding: 4rem 0;
+  background: #f7f9fc;
+}
+
+.grid-package-card {
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.grid-image-container { position: relative; height: 200px; overflow: hidden; }
+.grid-carousel { height: 100%; }
+.grid-carousel-image { height: 200px; background-size: cover; background-position: center; }
+
+/* smaller controls for per-card carousels */
+.grid-carousel .carousel-control-prev,
+.grid-carousel .carousel-control-next {
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.grid-carousel .carousel-control-prev-icon,
+.grid-carousel .carousel-control-next-icon {
+  filter: invert(1);
+  transform: scale(0.5);
+}
+
+.grid-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.grid-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.grid-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.grid-meta .meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: #5b6370;
+}
+
+.meta-icon {
+  color: #FF7D00;
+}
+
+.price-badge {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #FF7D00 !important;
+  border: 1px solid #ffe0c2;
+  font-size: 1.3rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 22px;
+  margin-left: auto;
+}
+
+.grid-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.view-btn {
+  background-color: transparent !important;
+  color: #FF7D00 !important;
+  border: 1px solid #FF7D00 !important;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  border-radius: 25px;
+}
+
+.book-now-btn {
+  background-color: #FF7D00 !important;
+  border-color: #FF7D00 !important;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  border-radius: 25px;
+}
+
+.grid-details {
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed #e2e8f0;
+}
+
+/* Simple collapse behavior */
+.grid-package-card .collapse {
+  transition: all 0.3s ease;
+}
+
+.grid-package-card .collapse:not(.show) {
+  display: none !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+.grid-package-card .collapse.show {
+  display: block !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+/* Ensure only one card is expanded at a time */
+.grid-package-card .collapse {
+  position: relative;
+}
+
+/* Additional styling for the expanded content */
+.grid-details h6 {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.grid-list .list-group-item {
+  padding: 0.3rem 0;
+  border: none;
+  color: #5b6370;
+  background: transparent;
+}
+
+.itinerary ol {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.itinerary li {
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .grid-package-card { border-radius: 12px; }
+}
+
+/* Modal Styles */
+.modal-package-header {
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 1rem;
+}
+
+.modal-package-title {
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.modal-package-meta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.modal-package-meta .meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: #5b6370;
+}
+
+.modal-price-badge {
+  background: rgba(255, 125, 0, 0.1) !important;
+  color: #FF7D00 !important;
+  border: 1px solid #FF7D00;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+}
+
+.modal-package-images {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.modal-carousel {
+  border-radius: 10px;
+}
+
+.modal-carousel-image {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.modal-carousel .carousel-control-prev,
+.modal-carousel .carousel-control-next {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 15px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.modal-carousel .carousel-control-prev-icon,
+.modal-carousel .carousel-control-next-icon {
+  filter: invert(1);
+  width: 20px;
+  height: 20px;
+}
+
+.modal-carousel .carousel-indicators {
+  bottom: 15px;
+}
+
+.modal-carousel .carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  margin: 0 3px;
+  transition: all 0.3s ease;
+}
+
+.modal-carousel .carousel-indicators button.active {
+  background-color: #FF7D00;
+  transform: scale(1.2);
+}
+
+.modal-list .list-group-item {
+  padding: 0.5rem 0;
+  border: none;
+  color: #5b6370;
+  background: transparent;
+  font-size: 0.9rem;
+}
+
+.itinerary h6 {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.itinerary ol {
+  margin: 0.5rem 0 0;
+  padding-left: 1.5rem;
+}
+
+.itinerary li {
+  margin-bottom: 0.5rem;
+  color: #5b6370;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments for modal */
+@media (max-width: 768px) {
+  .modal-carousel-image {
+    height: 200px;
+  }
+  
+  .modal-package-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .modal-price-badge {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+
