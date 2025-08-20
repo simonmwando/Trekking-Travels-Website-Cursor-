@@ -94,3 +94,30 @@ img {
 .border-orange {
   border-color: #FF7D00 !important;
 }
+
+/* Hostels Section */
+#hostels {
+  padding: 5rem 0;
+  background: #f8f9fa;
+}
+
+#hostels .section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+#hostels .section-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+
+
+/* About Page */
+.about-page {
+  padding-top: 10rem;
+  min-height: 100vh;
+}

@@ -48,6 +48,44 @@
   line-height: 1.2;
 }
 
+/* Secondary Navigation Bar in Hero */
+.hero-secondary-nav {
+  margin-bottom: 2rem;
+}
+
+.secondary-nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.1rem;
+  flex-wrap: nowrap;
+  width: auto;
+  margin: 0 auto;
+}
+
+.secondary-nav-link {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem; /* Increased font size by 25% from 1rem */
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.secondary-nav-link:hover {
+  color: #FF7D00;
+  transform: translateY(-2px);
+}
+
+.secondary-nav-link.active {
+  color: #FF7D00;
+  font-weight: 600;
+  transform: translateY(-2px);
+}
+
 .highlight {
   color: #FF7D00;
 }
@@ -67,6 +105,7 @@
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
+  gap: 1rem; /* Add gap between search input and button */
 }
 
 .search-input-group::before {
@@ -92,11 +131,11 @@
 .hero-search .search-input {
   border: none;
   outline: none;
-  font-size: 1rem;
+  font-size: 1.25rem; /* Increased font size by 25% from 1rem */
   padding: 1rem 0;
-  background: #ffffff;
+  background: #ffffff !important;
   flex: 1;
-  color: #000000;
+  color: #000000 !important;
   box-shadow: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -123,8 +162,25 @@
 }
 
 .hero-search .search-input::placeholder {
-  color: #000000;
+  color: #000000 !important;
   opacity: 0.6;
+}
+
+.hero-search .search-input input {
+  color: #000000 !important;
+}
+
+.hero-search .search-input * {
+  color: #000000 !important;
+}
+
+/* Override Bootstrap form control styles */
+.hero-search .search-input.form-control {
+  color: #000000 !important;
+}
+
+.hero-search .search-input[type="search"] {
+  color: #000000 !important;
 }
 
 .hero-search .search-input::selection {
@@ -146,8 +202,8 @@
   background-color: #156163;
   border-color: #156163;
   border-radius: 25px;
-  padding: 1rem 2rem;
-  font-size: 1rem;
+  padding: 1.25rem 5rem; /* Increased width by 2x from 2.5rem to 5rem */
+  font-size: 1.25rem; /* Increased font size by 25% from 1rem */
   font-weight: 600;
   transition: all 0.3s ease;
   border-left: 1px solid #e9ecef;
@@ -223,4 +279,5 @@
     font-size: 3rem; /* +50% */
   }
   
-} 
+}
+

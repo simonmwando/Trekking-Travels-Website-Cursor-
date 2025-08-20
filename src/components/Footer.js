@@ -61,14 +61,11 @@ const Footer = () => {
         <Row className="footer-content">
           <Col lg={4} md={6} className="mb-4">
             <div className="footer-brand">
-              <div className="brand-logo">
-                <img src={logo} alt="Trekking Travels Logo" className="footer-logo-image" />
-              </div>
-              <p className="brand-description">
-                Your trusted partner for unforgettable trekking adventures around the world. 
-                We specialize in creating authentic, safe, and transformative travel experiences.
-              </p>
-              <div className="social-links">
+                             <div className="brand-logo">
+                 <img src={logo} alt="Trekking Travels Logo" className="footer-logo-image" />
+               </div>
+               
+               <div className="social-links">
                 {socialLinks.map((social, index) => (
                   <a
                     key={index}

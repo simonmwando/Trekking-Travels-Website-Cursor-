@@ -1,3 +1,5 @@
+
+
 .navbar-custom {
   background: #156163;
   backdrop-filter: blur(10px);
@@ -36,24 +38,25 @@
 }
 
 .search-input {
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-  color: white !important;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  color: #000000 !important;
   border-radius: 999px; /* fully rounded corners */
-  height: 28px; /* reduced height */
-  font-size: 0.85rem;
-  padding: 0 10px;
+  height: 42px; /* reduced height by 25% from 56px */
+  width: 400px; /* increased width */
+  font-size: 2.125rem; /* increased font size by 25% from 1.7rem */
+  padding: 0 20px; /* increased padding by 2x from 10px */
 }
 
 .search-input::placeholder {
-  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(0, 0, 0, 0.6) !important;
 }
 
 .search-input:focus {
-  background-color: rgba(255, 255, 255, 0.15) !important;
-  border-color: rgba(255, 255, 255, 0.4) !important;
-  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.1) !important;
-  color: white !important;
+  background-color: rgba(255, 255, 255, 1) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.2) !important;
+  color: #000000 !important;
 }
 
 .search-button {
@@ -62,13 +65,13 @@
   background-color: transparent;
   color: white;
   transition: all 0.3s ease;
-  height: 28px; /* match input height */
-  width: 28px;
+  height: 42px; /* match new input height */
+  width: 42px;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem; /* increase search icon size */
+  font-size: 2.8rem; /* increase search icon size by 2x */
 }
 
 .search-button:hover {
@@ -79,6 +82,7 @@
 .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 0.8) !important;
   font-weight: 500;
+  font-size: 1.25rem; /* Same size as secondary navigation */
   margin: 0 0.5rem;
   transition: all 0.3s ease;
   position: relative;

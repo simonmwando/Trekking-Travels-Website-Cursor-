@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaPaperPlane } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
@@ -35,28 +35,22 @@ const Contact = () => {
 
   const contactInfo = [
     {
+      icon: <FaMapMarkerAlt />,
+      title: "Address",
+      details: ["Shop 3C, Ibex Hill, Twin Palm Road, Lusaka, Zambia"],
+      color: "#dc3545"
+    },
+    {
       icon: <FaPhone />,
       title: "Phone",
-      details: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
+      details: ["+260 764 121 396", "+260 964 040 855"],
       color: "#28a745"
     },
     {
       icon: <FaEnvelope />,
       title: "Email",
-      details: ["info@trekkingtravels.com", "bookings@trekkingtravels.com"],
+      details: ["reservations@trekkingtravelsandtours.com", "trekkingtravelsandtours@gmail.com"],
       color: "#007bff"
-    },
-    {
-      icon: <FaMapMarkerAlt />,
-      title: "Office",
-      details: ["123 Adventure Street", "Mountain View, CA 94041"],
-      color: "#dc3545"
-    },
-    {
-      icon: <FaClock />,
-      title: "Business Hours",
-      details: ["Mon-Fri: 9:00 AM - 6:00 PM", "Sat: 10:00 AM - 4:00 PM"],
-      color: "#ffc107"
     }
   ];
 
@@ -75,7 +69,7 @@ const Contact = () => {
         <Row>
           <Col lg={4} className="mb-4">
             <div className="contact-info">
-              <h4 className="contact-info-title">Contact Information</h4>
+              <h4 className="contact-info-title">Contact Details</h4>
               <p className="contact-info-subtitle">
                 We're here to help you plan your perfect adventure. Reach out to us through any of these channels.
               </p>

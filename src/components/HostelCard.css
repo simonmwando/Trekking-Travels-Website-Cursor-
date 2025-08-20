@@ -1,0 +1,90 @@
+.hostel-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+
+
+.hostel-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.hostel-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.hostel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hostel-card:hover .hostel-image img {
+  transform: scale(1.05);
+}
+
+.hostel-content {
+  padding: 20px;
+}
+
+.hostel-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+}
+
+.hostel-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.rating-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.rating-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  border: 2px solid #e0e0e0;
+}
+
+.star.filled {
+  background: #ff7d00;
+  border-color: #ff7d00;
+}
+
+.star.half-filled {
+  background: linear-gradient(90deg, #ff7d00 50%, #e0e0e0 50%);
+  border-color: #ff7d00;
+}
+
+.hostel-price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+
