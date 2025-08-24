@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Trekking-Travels-Website-Cursor-/static/css/main.ab004e53.css",
+    "main.js": "/Trekking-Travels-Website-Cursor-/static/js/main.52c0f642.js",
+    "static/media/victoria-falls-national.jpg": "/Trekking-Travels-Website-Cursor-/static/media/victoria-falls-national.a6e2e56c275af9455106.jpg",
+    "static/media/ZambiatravelagencyLogo.svg": "/Trekking-Travels-Website-Cursor-/static/media/ZambiatravelagencyLogo.80390657d07eb694a84b87895fac1146.svg",
+    "static/media/Logo green horizontal.svg": "/Trekking-Travels-Website-Cursor-/static/media/Logo green horizontal.207d4e1c77faaa233906a42961af3fc7.svg",
+    "static/media/IATALogo.svg": "/Trekking-Travels-Website-Cursor-/static/media/IATALogo.ab96fb7762fe72cba88da0f01ceea17c.svg",
+    "static/media/TravelportLogo.svg": "/Trekking-Travels-Website-Cursor-/static/media/TravelportLogo.4a2ab18a44b368281893751bfaf667ce.svg",
+    "index.html": "/Trekking-Travels-Website-Cursor-/index.html",
+    "main.ab004e53.css.map": "/Trekking-Travels-Website-Cursor-/static/css/main.ab004e53.css.map",
+    "main.52c0f642.js.map": "/Trekking-Travels-Website-Cursor-/static/js/main.52c0f642.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab004e53.css",
+    "static/js/main.52c0f642.js"
+  ]
+}
