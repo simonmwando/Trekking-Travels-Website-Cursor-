@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { FaPlay, FaArrowRight } from 'react-icons/fa';
 import './About.css';
 
@@ -12,52 +12,52 @@ const About = () => {
             <div className="about-content">
               <h2 className="section-title">About Trekking Travels</h2>
               <p className="about-description">
-                Founded in 2008, Trekking Travels has been at the forefront of adventure tourism, 
-                specializing in creating unforgettable trekking experiences across the globe. 
-                Our passion for exploration and commitment to sustainable tourism has made us 
-                a trusted name in the industry.
+                Trekking Travel and Tours, situated in Lusaka, stands as a dynamic Travel and Tour Agency led by a team of enthusiastic and dedicated individuals deeply passionate about travel and tourism. Their fervor extends to sharing the wonders of Zambia and the broader world with both local and global audiences.
               </p>
               
               <p className="about-description">
-                We believe that every journey should be more than just a physical challenge – 
-                it should be a transformative experience that connects you with nature, culture, 
-                and fellow adventurers. Our carefully crafted itineraries combine the thrill of 
-                trekking with authentic cultural immersion.
+                Boasting a wealth of over 20 years of experience in the field, Trekking Travels and Tours offers unparalleled services in the Travel and Tourism Industry, ensuring a top-notch experience for their clientele.
               </p>
               
               <div className="about-features">
                 <div className="feature-item">
                   <div className="feature-icon">✓</div>
-                  <span>15+ Years of Experience</span>
+                  <span>20+ Years of Experience</span>
                 </div>
                 <div className="feature-item">
                   <div className="feature-icon">✓</div>
-                  <span>Certified Local Guides</span>
+                  <span>Based in Lusaka, Zambia</span>
                 </div>
                 <div className="feature-item">
                   <div className="feature-icon">✓</div>
-                  <span>Sustainable Tourism Practices</span>
+                  <span>Local & Global Tourism</span>
                 </div>
                 <div className="feature-item">
                   <div className="feature-icon">✓</div>
-                  <span>24/7 Support During Trips</span>
+                  <span>Passionate Team</span>
                 </div>
               </div>
             </div>
           </Col>
           
-          <Col lg={6}>
-            <div className="about-media">
-              <div className="video-container">
-                <div className="video-placeholder">
+          <Col lg={6} className="mb-4 mb-lg-0">
+            <div className="podcast-preview">
+              <h3 className="podcast-title">🎙️ Trekking Podcast</h3>
+              <p className="podcast-description">
+                Join us on our exciting trekking adventures through our podcast! We share stories, tips, and insights from our travels across Zambia and around the world.
+              </p>
+              
+              <div className="video-preview-container">
+                <div className="video-preview">
                   <div className="video-overlay">
-                    <Button 
-                      variant="light" 
-                      size="lg" 
-                      className="play-button"
+                    <a 
+                      href="https://www.youtube.com/@trekkingtravels" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="play-button-overlay"
                     >
                       <FaPlay />
-                    </Button>
+                    </a>
                   </div>
                   <div 
                     className="video-background"
@@ -66,6 +66,18 @@ const About = () => {
                     }}
                   ></div>
                 </div>
+              </div>
+              
+              <div className="podcast-cta">
+                <a 
+                  href="https://www.youtube.com/@trekkingtravels" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="podcast-button"
+                >
+                  Watch on YouTube
+                  <FaArrowRight className="ms-2" />
+                </a>
               </div>
             </div>
           </Col>

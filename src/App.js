@@ -1,6 +1,7 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import { FaPlane, FaUsers, FaMicrophone, FaGift, FaPassport, FaShieldAlt, FaGlobe, FaSuitcase, FaCar, FaGraduationCap, FaFutbol, FaShuttleVan, FaPray } from 'react-icons/fa';
+
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import HostelCard from './components/HostelCard';
@@ -9,12 +10,13 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import HostelDetail from './components/HostelDetail';
+import ServicesPage from './components/ServicesPage';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <Navigation />
+// Home page component
+const HomePage = () => (
+  <>
       <section id="home">
         <Hero />
       </section>
@@ -34,6 +36,7 @@ function App() {
                 price={96}
                 image="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2070&q=80"
                 altText="Modern hostel lobby"
+              slug="11th-avenue-hostel"
               />
             </div>
             <div className="col-lg-3 col-md-6 col-12 mb-4">
@@ -43,6 +46,7 @@ function App() {
                 price={78}
                 image="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=2070&q=80"
                 altText="Cozy hostel common area"
+                slug="downtown-backpackers"
               />
             </div>
             <div className="col-lg-3 col-md-6 col-12 mb-4">
@@ -52,6 +56,7 @@ function App() {
                 price={112}
                 image="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=2070&q=80"
                 altText="Scenic mountain hostel"
+              slug="mountain-view-lodge"
               />
             </div>
             <div className="col-lg-3 col-md-6 col-12 mb-4">
@@ -61,6 +66,7 @@ function App() {
                 price={89}
                 image="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&fit=crop&w=2070&q=80"
                 altText="Beach hostel with ocean view"
+              slug="beachside-bunkhouse"
               />
             </div>
           </div>
@@ -69,170 +75,29 @@ function App() {
       <section id="packages">
         <WhyChooseUs />
       </section>
-                    <section id="services" className="why-choose-us-section">
-                <Container>
-                  <Row className="justify-content-center">
-                    <Col lg={8} className="text-center mb-5">
-                      <h2 className="section-title">Our Services</h2>
-                      <p className="section-subtitle">
-                        Comprehensive travel and trekking solutions for all your adventure needs
-                      </p>
-                    </Col>
-                  </Row>
-                  
-                  <Row>
-                    <Col lg={3} md={6} className="mb-4">
-                      <Card className="reason-card h-100">
-                        <Card.Body className="text-center">
-                          <div className="icon-container">
-                            <FaPlane />
-                          </div>
-                          <h5 className="reason-title">Airline Reservation & Ticketing</h5>
-                          <p className="reason-description">Immediate reservations and ticketing for over 130 global airlines.</p>
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                    <Col lg={3} md={6} className="mb-4">
-                      <Card className="reason-card h-100">
-                        <Card.Body className="text-center">
-                          <div className="icon-container">
-                            <FaUsers />
-                          </div>
-                          <h5 className="reason-title">Meetings, Incentives & Corporate Events</h5>
-                          <p className="reason-description">Comprehensive management of M.I.C.E. events and corporate functions.</p>
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                    <Col lg={3} md={6} className="mb-4">
-                      <Card className="reason-card h-100">
-                        <Card.Body className="text-center">
-                          <div className="icon-container">
-                            <FaMicrophone />
-                          </div>
-                          <h5 className="reason-title">Conferences</h5>
-                          <p className="reason-description">Assistance in executing corporate events, including company-wide conferences and product launches.</p>
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                    <Col lg={3} md={6} className="mb-4">
-                      <Card className="reason-card h-100">
-                        <Card.Body className="text-center">
-                          <div className="icon-container">
-                            <FaGift />
-                          </div>
-                          <h5 className="reason-title">Incentive Travel</h5>
-                          <p className="reason-description">Strategic implementation of incentive programs to foster loyalty and motivation.</p>
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                    <Col lg={3} md={6} className="mb-4">
-                      <Card className="reason-card h-100">
-                        <Card.Body className="text-center">
-                          <div className="icon-container">
-                            <FaPassport />
-                          </div>
-                          <h5 className="reason-title">Visas</h5>
-                          <p className="reason-description">Visa processing for a selection of countries in Africa and globally.</p>
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                    <Col lg={3} md={6} className="mb-4">
-                      <Card className="reason-card h-100">
-                        <Card.Body className="text-center">
-                          <div className="icon-container">
-                            <FaShieldAlt />
-                          </div>
-                          <h5 className="reason-title">Travel Insurance</h5>
-                          <p className="reason-description">Mandatory travel insurance included in all travel, underwritten by a reputable provider.</p>
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                    <Col lg={3} md={6} className="mb-4">
-                      <Card className="reason-card h-100">
-                        <Card.Body className="text-center">
-                          <div className="icon-container">
-                            <FaGlobe />
-                          </div>
-                          <h5 className="reason-title">Group Travel</h5>
-                          <p className="reason-description">24/7 global travel support with local management for continuous assistance.</p>
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                    <Col lg={3} md={6} className="mb-4">
-                      <Card className="reason-card h-100">
-                        <Card.Body className="text-center">
-                          <div className="icon-container">
-                            <FaSuitcase />
-                          </div>
-                          <h5 className="reason-title">Holiday Packages</h5>
-                          <p className="reason-description">A diverse selection from cost-effective to bespoke itineraries.</p>
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                    <Col lg={3} md={6} className="mb-4">
-                      <Card className="reason-card h-100">
-                        <Card.Body className="text-center">
-                          <div className="icon-container">
-                            <FaCar />
-                          </div>
-                          <h5 className="reason-title">Car Rental Services</h5>
-                          <p className="reason-description">A diverse fleet including sedans, 4x4s, standard buses, and luxury coaches.</p>
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                    <Col lg={3} md={6} className="mb-4">
-                      <Card className="reason-card h-100">
-                        <Card.Body className="text-center">
-                          <div className="icon-container">
-                            <FaGraduationCap />
-                          </div>
-                          <h5 className="reason-title">Student Travel</h5>
-                          <p className="reason-description">Competitive airfares, exclusive packages, extra baggage allowances, and student travel insurance.</p>
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                    <Col lg={3} md={6} className="mb-4">
-                      <Card className="reason-card h-100">
-                        <Card.Body className="text-center">
-                          <div className="icon-container">
-                            <FaFutbol />
-                          </div>
-                          <h5 className="reason-title">Sport Adventure Travel</h5>
-                          <p className="reason-description">Arranges sporting trips for individuals and groups.</p>
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                    <Col lg={3} md={6} className="mb-4">
-                      <Card className="reason-card h-100">
-                        <Card.Body className="text-center">
-                          <div className="icon-container">
-                            <FaShuttleVan />
-                          </div>
-                          <h5 className="reason-title">Airport Transfers</h5>
-                          <p className="reason-description">Pre-booked airport transfers for a seamless travel experience.</p>
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                    <Col lg={3} md={6} className="mb-4">
-                      <Card className="reason-card h-100">
-                        <Card.Body className="text-center">
-                          <div className="icon-container">
-                            <FaPray />
-                          </div>
-                          <h5 className="reason-title">Religious Travel</h5>
-                          <p className="reason-description">Curated travel packages for religious travelers to popular destinations.</p>
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                  </Row>
-                </Container>
+    <section id="about">
+      <About />
               </section>
       <section id="contact">
         <Contact />
       </section>
+  </>
+);
+
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <Navigation />
+                       <Routes>
+                 <Route path="/" element={<HomePage />} />
+                 <Route path="/hostel/:slug" element={<HostelDetail />} />
+                 <Route path="/services" element={<ServicesPage />} />
+               </Routes>
       <Footer />
       <WhatsAppButton />
     </div>
+    </Router>
   );
 }
        

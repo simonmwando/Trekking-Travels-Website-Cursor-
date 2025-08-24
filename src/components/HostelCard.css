@@ -15,6 +15,15 @@
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
+.hostel-card.clickable {
+  cursor: pointer;
+}
+
+.hostel-card.clickable:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
 .hostel-image {
   width: 100%;
   height: 200px;
@@ -63,21 +72,21 @@
 }
 
 .star {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: #e0e0e0;
-  border: 2px solid #e0e0e0;
+  font-size: 18px;
+  color: #e0e0e0;
 }
 
 .star.filled {
-  background: #ff7d00;
-  border-color: #ff7d00;
+  color: #ff7d00;
 }
 
 .star.half-filled {
-  background: linear-gradient(90deg, #ff7d00 50%, #e0e0e0 50%);
-  border-color: #ff7d00;
+  color: #ff7d00;
+  opacity: 0.7;
+}
+
+.star.empty {
+  color: #e0e0e0;
 }
 
 .hostel-price {

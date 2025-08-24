@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Form, FormControl, Button } from 'react-bootstrap';
-import { FaSearch } from 'react-icons/fa';
+import { Container, Row, Col, Form, FormControl, Button, Dropdown } from 'react-bootstrap';
+import { FaSearch, FaChevronDown } from 'react-icons/fa';
 import './Hero.css';
 
 const Hero = () => {
@@ -25,7 +25,8 @@ const Hero = () => {
             
                                {/* Secondary Navigation Bar */}
                    <div className="hero-secondary-nav">
-                     <div className="secondary-nav-links">
+                     {/* Desktop Navigation */}
+                     <div className="secondary-nav-links desktop-nav">
                        <button 
                          className={`secondary-nav-link ${selectedNav === 'search-all' ? 'active' : ''}`}
                          onClick={() => handleNavClick('search-all')}
@@ -44,24 +45,65 @@ const Hero = () => {
                        >
                          Local packages
                        </button>
-                       <button 
-                         className={`secondary-nav-link ${selectedNav === 'hotel' ? 'active' : ''}`}
-                         onClick={() => handleNavClick('hotel')}
+                       <div className="hotel-lodges-group">
+                         <button 
+                           className={`secondary-nav-link ${selectedNav === 'hotel' ? 'active' : ''}`}
+                           onClick={() => handleNavClick('hotel')}
+                         >
+                           Hotel
+                         </button>
+                         <button 
+                           className={`secondary-nav-link ${selectedNav === 'lodges' ? 'active' : ''}`}
+                           onClick={() => handleNavClick('lodges')}
                        >
-                         Hotel
-                       </button>
-                       <button 
-                         className={`secondary-nav-link ${selectedNav === 'lodges' ? 'active' : ''}`}
-                         onClick={() => handleNavClick('lodges')}
-                       >
-                         Lodges
-                       </button>
+                           Lodges
+                         </button>
+                       </div>
                        <button 
                          className={`secondary-nav-link ${selectedNav === 'promo' ? 'active' : ''}`}
                          onClick={() => handleNavClick('promo')}
                        >
                          Promo
                        </button>
+                     </div>
+                     
+                     {/* Mobile Dropdown Navigation */}
+                     <div className="mobile-nav">
+                       <div className="mobile-nav-container">
+                         <span className="filter-label">Filter</span>
+                         <Dropdown onSelect={(eventKey) => handleNavClick(eventKey)}>
+                           <Dropdown.Toggle className="mobile-nav-dropdown">
+                             {selectedNav === 'search-all' ? 'Search all' :
+                              selectedNav === 'international' ? 'International packages' :
+                              selectedNav === 'local' ? 'Local packages' :
+                              selectedNav === 'hotel' ? 'Hotel' :
+                              selectedNav === 'lodges' ? 'Lodges' :
+                              selectedNav === 'promo' ? 'Promo' : 'Select option'}
+                             <FaChevronDown className="dropdown-arrow" />
+                           </Dropdown.Toggle>
+                           
+                           <Dropdown.Menu className="mobile-dropdown-menu">
+                             <Dropdown.Item eventKey="search-all" className={selectedNav === 'search-all' ? 'active' : ''}>
+                               Search all
+                             </Dropdown.Item>
+                             <Dropdown.Item eventKey="international" className={selectedNav === 'international' ? 'active' : ''}>
+                               International packages
+                             </Dropdown.Item>
+                             <Dropdown.Item eventKey="local" className={selectedNav === 'local' ? 'active' : ''}>
+                               Local packages
+                             </Dropdown.Item>
+                             <Dropdown.Item eventKey="hotel" className={selectedNav === 'hotel' ? 'active' : ''}>
+                               Hotel
+                             </Dropdown.Item>
+                             <Dropdown.Item eventKey="lodges" className={selectedNav === 'lodges' ? 'active' : ''}>
+                               Lodges
+                             </Dropdown.Item>
+                             <Dropdown.Item eventKey="promo" className={selectedNav === 'promo' ? 'active' : ''}>
+                               Promo
+                             </Dropdown.Item>
+                           </Dropdown.Menu>
+                         </Dropdown>
+                       </div>
                      </div>
                    </div>
             

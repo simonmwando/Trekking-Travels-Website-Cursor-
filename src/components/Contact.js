@@ -43,7 +43,7 @@ const Contact = () => {
     {
       icon: <FaPhone />,
       title: "Phone",
-      details: ["+260 764 121 396", "+260 964 040 855"],
+      details: ["+260 764 121 396", "+260 979 484 920"],
       color: "#28a745"
     },
     {

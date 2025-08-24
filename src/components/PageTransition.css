@@ -1,0 +1,109 @@
+.page-transition {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.page-content {
+  animation: pageEnter 0.3s ease-out;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-transition.transitioning .page-content {
+  animation: pageExit 0.2s ease-in forwards;
+}
+
+/* Page Enter Animation */
+@keyframes pageEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Page Exit Animation */
+@keyframes pageExit {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* Additional smooth transitions for all elements */
+.page-content * {
+  transition: all 0.3s ease;
+}
+
+/* Loading spinner for page transitions */
+.page-transition.transitioning::before {
+  content: '';
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #FF7D00;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  z-index: 9999;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Smooth fade for navigation changes */
+.navbar-custom {
+  transition: all 0.3s ease;
+}
+
+/* Enhanced hover effects during transitions */
+.page-transition.transitioning .btn:hover,
+.page-transition.transitioning .card:hover {
+  transform: none;
+}
+
+/* Responsive animations */
+@media (max-width: 768px) {
+  .page-content {
+    animation: pageEnter 0.25s ease-out;
+  }
+  
+  .page-transition.transitioning .page-content {
+    animation: pageExit 0.15s ease-in forwards;
+  }
+  
+  @keyframes pageEnter {
+    0% {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes pageExit {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+  }
+}

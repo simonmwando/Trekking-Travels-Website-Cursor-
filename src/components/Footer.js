@@ -3,6 +3,9 @@ import { Container, Row, Col, Nav } from 'react-bootstrap';
 import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import logo from '../Logo green horizontal.svg';
+import iataLogo from '../IATALogo.svg';
+import travelportLogo from '../TravelportLogo.svg';
+import zambiaTravelAgencyLogo from '../ZambiatravelagencyLogo.svg';
 import './Footer.css';
 
 const Footer = () => {
@@ -144,6 +147,39 @@ const Footer = () => {
                 </Nav.Link>
               ))}
             </Nav>
+          </Col>
+        </Row>
+        
+        {/* Accreditation and Membership Logos */}
+        <Row className="accreditation-section">
+          <Col className="text-center">
+            <h6 className="accreditation-title">Accredited & Certified</h6>
+            <div className="accreditation-logos">
+              <div className="accreditation-logo">
+                <img 
+                  src={iataLogo}
+                  alt="IATA Accredited" 
+                  className="accreditation-image"
+                />
+                <span className="accreditation-label">IATA Accredited</span>
+              </div>
+              <div className="accreditation-logo">
+                <img 
+                  src={travelportLogo}
+                  alt="Travelport Partner" 
+                  className="accreditation-image"
+                />
+                <span className="accreditation-label">Travelport Partner</span>
+              </div>
+              <div className="accreditation-logo">
+                <img 
+                  src={zambiaTravelAgencyLogo}
+                  alt="Zambia Travel Agency Member" 
+                  className="accreditation-image"
+                />
+                <span className="accreditation-label">Zambia Travel Agency</span>
+              </div>
+            </div>
           </Col>
         </Row>
         

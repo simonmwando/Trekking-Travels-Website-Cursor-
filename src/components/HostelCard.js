@@ -1,27 +1,44 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { FaStar } from 'react-icons/fa';
 import './HostelCard.css';
 
-const HostelCard = ({ name, rating, price, image, altText }) => {
-  // Generate stars based on rating
+const HostelCard = ({ name, rating, price, image, altText, slug }) => {
+  const navigate = useNavigate();
+
   const generateStars = (rating) => {
+    const stars = [];
     const fullStars = Math.floor(rating);
     const hasHalfStar = rating % 1 !== 0;
-    const stars = [];
-    
-    for (let i = 0; i < 5; i++) {
-      if (i < fullStars) {
-        stars.push(<div key={i} className="star filled"></div>);
-      } else if (i === fullStars && hasHalfStar) {
-        stars.push(<div key={i} className="star half-filled"></div>);
-      } else {
-        stars.push(<div key={i} className="star"></div>);
-      }
+
+    for (let i = 0; i < fullStars; i++) {
+      stars.push(<FaStar key={i} className="star filled" />);
     }
+
+    if (hasHalfStar) {
+      stars.push(<FaStar key="half" className="star half-filled" />);
+    }
+
+    const emptyStars = 5 - Math.ceil(rating);
+    for (let i = 0; i < emptyStars; i++) {
+      stars.push(<FaStar key={`empty-${i}`} className="star empty" />);
+    }
+
     return stars;
   };
 
+  const handleCardClick = () => {
+    if (slug) {
+      navigate(`/hostel/${slug}`);
+    }
+  };
+
   return (
-    <div className="hostel-card">
+    <div 
+      className={`hostel-card ${slug ? 'clickable' : ''}`}
+      onClick={handleCardClick}
+      style={{ cursor: slug ? 'pointer' : 'default' }}
+    >
       <div className="hostel-image">
         <img 
           src={image} 
