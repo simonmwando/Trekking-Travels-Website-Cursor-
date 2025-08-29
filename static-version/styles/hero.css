@@ -1,0 +1,606 @@
+.hero-section {
+  position: relative;
+  height: 50vh; /* reduced from 55vh to 50vh */
+  min-height: 400px; /* reduced from 450px to 400px */
+  display: flex;
+  align-items: center; /* restored center alignment */
+  padding: 2rem 0; /* add top and bottom padding */
+  margin-top: 2rem; /* reduced top margin since navigation is no longer fixed */
+  overflow: hidden;
+  max-width: 1320px; /* increased by 10% from 1200px */
+  margin-left: auto; /* center the hero section */
+  margin-right: auto; /* center the hero section */
+  width: 100%; /* full width within container */
+  border-radius: 20px; /* rounded corners */
+  overflow: hidden; /* ensure content doesn't overflow rounded corners */
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-image: url('../victoria-falls-national.jpg'); /* local waterfall image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  border-radius: 20px; /* ensure background respects rounded corners */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* restored center alignment */
+  padding-top: 0; /* removed padding-top */
+  padding-bottom: 0; /* removed padding-bottom completely */
+}
+
+.hero-title {
+  font-size: 4.8rem; /* +50% */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+/* Secondary Navigation Bar in Hero */
+.hero-secondary-nav {
+  margin-bottom: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  padding: 0.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  max-width: 65.025%; /* reduced by another 10% from 72.25% */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.secondary-nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.1rem;
+  flex-wrap: nowrap;
+  width: 100%;
+  max-width: 1000px; /* Match search bar width */
+  margin: 0 auto;
+}
+
+.secondary-nav-link {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem; /* Increased font size by 25% from 1rem */
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.secondary-nav-link:hover {
+  color: #FF7D00;
+  transform: translateY(-2px);
+}
+
+.secondary-nav-link.active {
+  color: #FF7D00;
+  font-weight: 600;
+}
+
+/* Hotel and Lodges group styling */
+.hotel-lodges-group {
+  display: flex;
+  gap: 0.1rem;
+}
+
+/* Mobile Navigation Styling */
+.mobile-nav {
+  display: none;
+}
+
+.desktop-nav {
+  display: flex;
+}
+
+.mobile-nav-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.filter-label {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.mobile-nav-dropdown {
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  color: white !important;
+  font-size: 1.875rem; /* Increased by 50% from 1.25rem */
+  font-weight: 500;
+  padding: 1.125rem 2.25rem; /* Increased by 50% from 0.75rem 1.5rem */
+  border-radius: 37.5px; /* Increased by 50% from 25px */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  width: 100%;
+  max-width: 1000px;
+}
+
+.mobile-nav-dropdown:hover,
+.mobile-nav-dropdown:focus,
+.mobile-nav-dropdown:active {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  color: white !important;
+  box-shadow: none !important;
+}
+
+.dropdown-arrow {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.mobile-dropdown-menu {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  margin-top: 0.5rem;
+}
+
+.mobile-dropdown-menu .dropdown-item {
+  color: #333;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.mobile-dropdown-menu .dropdown-item:hover {
+  background: rgba(21, 97, 99, 0.1);
+  color: #156163;
+}
+
+.mobile-dropdown-menu .dropdown-item.active {
+  background: #FF7D00;
+  color: white;
+}
+
+.highlight {
+  color: #FF7D00;
+}
+
+.hero-search {
+  margin-bottom: 2rem;
+}
+
+.search-input-group {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  gap: 1rem; /* Add gap between search input and button */
+}
+
+.search-input-group::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  border-radius: 25px;
+  z-index: -1;
+}
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 0 1rem;
+  background: #ffffff;
+}
+
+.hero-search .search-input {
+  border: none;
+  outline: none;
+  font-size: 1.25rem; /* Increased font size by 25% from 1rem */
+  padding: 1rem 0;
+  background: #ffffff !important;
+  flex: 1;
+  color: #000000 !important;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.hero-search .search-input:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+
+.hero-search .search-input:focus-visible {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+.hero-search .search-input::-webkit-focus-inner {
+  border: 0;
+  outline: 0;
+}
+
+.hero-search .search-input::placeholder {
+  color: #000000 !important;
+  opacity: 0.6;
+}
+
+.hero-search .search-input input {
+  color: #000000 !important;
+}
+
+.hero-search .search-input * {
+  color: #000000 !important;
+}
+
+/* Override Bootstrap form control styles */
+.hero-search .search-input.form-control {
+  color: #000000 !important;
+}
+
+.hero-search .search-input[type="search"] {
+  color: #000000 !important;
+}
+
+.hero-search .search-input::selection {
+  background: transparent;
+}
+
+.hero-search .search-input::-moz-selection {
+  background: transparent;
+}
+
+/* Style the search input clear button (X icon) to be orange */
+.hero-search .search-input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FF7D00'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/></svg>");
+  background-size: contain;
+  cursor: pointer;
+}
+
+.hero-search .search-input::-ms-clear {
+  color: #FF7D00;
+  cursor: pointer;
+}
+
+.search-icon {
+  color: #156163;
+  margin-right: 0.75rem;
+  font-size: 1.1rem;
+  filter: none;
+}
+
+.hero-search .search-button {
+  background-color: #156163;
+  border-color: #156163;
+  border-radius: 25px;
+  padding: 1.25rem 5rem; /* Increased width by 2x from 2.5rem to 5rem */
+  font-size: 1.25rem; /* Increased font size by 25% from 1rem */
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-left: 1px solid #e9ecef;
+}
+
+.hero-search .search-button:hover {
+  background-color: #0f4a4c;
+  border-color: #0f4a4c;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(21, 97, 99, 0.3);
+}
+
+.hero-buttons {
+  margin-bottom: 0.5rem; /* reduced from 1rem to 0.5rem */
+}
+
+.cta-button {
+  background-color: #FF7D00 !important;
+  border-color: #FF7D00 !important;
+  padding: 0.45rem 0.9rem; /* slightly narrower */
+  font-weight: 600;
+  transition: all 0.3s ease;
+  min-width: 140px; /* reduced width */
+  border-radius: 999px; /* fully rounded corners */
+}
+
+.cta-button:hover {
+  background-color: #e67000 !important;
+  border-color: #e67000 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 125, 0, 0.3);
+}
+
+.play-button {
+  border-width: 2px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.play-button:hover {
+  background-color: white;
+  color: #333;
+  transform: translateY(-2px);
+}
+
+/* Hero Carousel Styles */
+#heroCarousel {
+    overflow: hidden;
+    border-radius: 20px; /* match hero section rounded corners */
+}
+
+#heroCarousel .carousel-inner {
+    border-radius: 20px; /* ensure inner content respects rounded corners */
+}
+
+#heroCarousel .carousel-item {
+    border-radius: 20px; /* ensure each slide has rounded corners */
+    overflow: hidden;
+}
+
+#heroCarousel .carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Carousel Controls */
+#heroCarousel .carousel-control-prev,
+#heroCarousel .carousel-control-next {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+#heroCarousel .carousel-control-prev:hover,
+#heroCarousel .carousel-control-next:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-50%) scale(1.1);
+}
+
+#heroCarousel .carousel-control-prev-icon,
+#heroCarousel .carousel-control-next-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Carousel Indicators */
+#heroCarousel .carousel-indicators {
+    bottom: 20px;
+    z-index: 4;
+}
+
+#heroCarousel .carousel-indicators button {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 0 4px;
+    transition: all 0.3s ease;
+}
+
+#heroCarousel .carousel-indicators button.active {
+    background-color: #fff;
+    border-color: #fff;
+    transform: scale(1.2);
+}
+
+#heroCarousel .carousel-indicators button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #heroCarousel .carousel-control-prev,
+    #heroCarousel .carousel-control-next {
+        width: 50px;
+        height: 50px;
+    }
+    
+    #heroCarousel .carousel-control-prev-icon,
+    #heroCarousel .carousel-control-next-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    #heroCarousel .carousel-indicators {
+        bottom: 15px;
+    }
+    
+    #heroCarousel .carousel-indicators button {
+        width: 6px;
+        height: 6px;
+        margin: 0 3px;
+    }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 60vh;
+    min-height: 420px;
+    padding: 1.5rem 0; /* reduced padding for tablets */
+    margin-top: 1.5rem; /* reduced top margin for tablets */
+    align-items: center;
+    max-width: 100%; /* full width on tablets */
+    margin-left: 0; /* no centering on smaller screens */
+    margin-right: 0; /* no centering on smaller screens */
+    border-radius: 16px; /* slightly smaller rounded corners on tablets */
+  }
+  
+  #heroCarousel,
+  #heroCarousel .carousel-inner,
+  #heroCarousel .carousel-item,
+  .hero-background {
+    border-radius: 16px; /* match tablet hero section rounded corners */
+  }
+  .hero-title {
+    font-size: 3.75rem; /* +50% */
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Mobile styling for secondary navigation */
+  .hero-secondary-nav {
+    padding: 0.1rem 0.25rem;
+    margin: 0 2rem 2rem 2rem;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    box-shadow: none;
+  }
+  
+  /* Hide desktop nav and show mobile nav on mobile */
+  .desktop-nav {
+    display: none;
+  }
+  
+  .mobile-nav {
+    display: block;
+  }
+  
+  .secondary-nav-links {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  
+  .secondary-nav-link {
+    font-size: 1.2rem; /* Increased font size for better mobile readability */
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+  }
+  
+  .hotel-lodges-group {
+    display: flex;
+    gap: 0.1rem;
+  }
+  
+  /* Mobile dropdown styling */
+  .mobile-nav-dropdown {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .mobile-dropdown-menu .dropdown-item {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+  
+  .filter-label {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    height: 55vh;
+    min-height: 380px;
+    padding: 1rem 0; /* reduced padding for mobile */
+    margin-top: 1rem; /* reduced top margin for mobile */
+    align-items: center;
+    max-width: 100%; /* full width on mobile */
+    margin-left: 0; /* no centering on mobile */
+    margin-right: 0; /* no centering on mobile */
+    border-radius: 12px; /* smaller rounded corners on mobile */
+  }
+  
+  #heroCarousel,
+  #heroCarousel .carousel-inner,
+  #heroCarousel .carousel-item,
+  .hero-background {
+    border-radius: 12px; /* match mobile hero section rounded corners */
+  }
+  .hero-title {
+    font-size: 3rem; /* +50% */
+  }
+  
+  /* Extra small mobile styling for secondary navigation */
+  .hero-secondary-nav {
+    padding: 0.05rem 0.15rem;
+    margin: 0 2rem 1.5rem 2rem;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    box-shadow: none;
+  }
+  
+  .secondary-nav-links {
+    gap: 0.25rem;
+  }
+  
+  .secondary-nav-link {
+    font-size: 1.1rem; /* Increased font size for better mobile readability */
+    padding: 0.4rem 0.8rem;
+  }
+  
+  /* Extra small mobile dropdown styling */
+  .mobile-nav-dropdown {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .mobile-dropdown-menu .dropdown-item {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .filter-label {
+    font-size: 1rem;
+  }
+}

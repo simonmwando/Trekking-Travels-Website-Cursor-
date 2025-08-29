@@ -1,0 +1,296 @@
+/* Montserrat Font Styling */
+
+/* Global Font Family */
+* {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    font-size: 16px; /* Base font size increased to match TripAdvisor */
+}
+
+/* Typography Scale - TripAdvisor Style */
+h1, .h1 {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    font-size: 3.5rem; /* 56px - Large hero titles */
+}
+
+h2, .h2 {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    font-size: 2.5rem; /* 40px - Section titles */
+}
+
+h3, .h3 {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    font-size: 2rem; /* 32px - Subsection titles */
+}
+
+h4, .h4 {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem; /* 24px - Card titles */
+}
+
+h5, .h5 {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem; /* 20px - Small titles */
+}
+
+h6, .h6 {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 1.125rem; /* 18px - Micro titles */
+}
+
+/* Navigation */
+.navbar-brand,
+.navbar-nav .nav-link {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 1.125rem; /* 18px - Navigation links */
+}
+
+/* Hero Section */
+.hero-title {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    font-size: 4rem; /* 64px - Extra large hero title like TripAdvisor */
+}
+
+.hero-secondary-nav .secondary-nav-link {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 1.125rem; /* 18px - Navigation buttons */
+}
+
+/* Section Titles */
+.section-title {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    font-size: 2.75rem; /* 44px - Large section titles */
+}
+
+.section-subtitle {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem; /* 20px - Section descriptions */
+}
+
+/* Cards */
+.hostel-title {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    font-size: 1.5rem; /* 24px - Card titles */
+}
+
+.reason-title {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 600;
+    font-size: 1.375rem; /* 22px - Feature titles */
+}
+
+/* Buttons */
+.btn {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    font-size: 1.125rem; /* 18px - Button text */
+}
+
+/* Forms */
+.form-label,
+.form-control,
+.form-select {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem; /* 18px - Form elements */
+}
+
+/* Footer */
+.footer-title {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem; /* 20px - Footer section titles */
+}
+
+.footer-link {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 1.0625rem; /* 17px - Footer links */
+}
+
+/* Badges and Tags */
+.badge,
+.feature-tag {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 1rem; /* 16px - Badges and tags */
+}
+
+/* Price and Rating */
+.price-amount,
+.rating-score {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem; /* 20px - Price and rating text */
+}
+
+/* Stats */
+.stat-item h3 {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    font-size: 2.5rem; /* 40px - Large stat numbers */
+}
+
+.stat-item p {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem; /* 18px - Stat descriptions */
+}
+
+/* Responsive Typography - TripAdvisor Style */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem !important; /* 48px - Still large on mobile */
+        line-height: 1.2;
+    }
+    
+    .section-title {
+        font-size: 2rem !important; /* 32px - Maintain readability on mobile */
+        line-height: 1.3;
+    }
+    
+    .section-subtitle {
+        font-size: 1.125rem !important; /* 18px - Mobile subtitle */
+    }
+    
+    .hostel-title {
+        font-size: 1.375rem !important; /* 22px - Mobile card titles */
+    }
+    
+    .card-title {
+        font-size: 1.75rem !important; /* 28px - Mobile card titles */
+    }
+    
+    .service-title {
+        font-size: 1.375rem !important; /* 22px - Mobile service titles */
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2.5rem !important; /* 40px - Small mobile hero */
+    }
+    
+    .section-title {
+        font-size: 1.75rem !important; /* 28px - Small mobile sections */
+    }
+    
+    .card-title {
+        font-size: 1.5rem !important; /* 24px - Small mobile cards */
+    }
+}
+
+/* Font Smoothing */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Additional TripAdvisor Style Typography */
+p, .text-content {
+    font-size: 1.125rem; /* 18px - Body text */
+    line-height: 1.7;
+}
+
+.small-text {
+    font-size: 1rem; /* 16px - Small text */
+}
+
+.large-text {
+    font-size: 1.25rem; /* 20px - Large text */
+}
+
+.extra-large-text {
+    font-size: 1.5rem; /* 24px - Extra large text */
+}
+
+/* Uniform Font Sizes for All Pages */
+.hero-title {
+    font-size: 4rem !important; /* 64px - Hero titles */
+}
+
+.section-title {
+    font-size: 2.75rem !important; /* 44px - Section titles */
+}
+
+.section-subtitle {
+    font-size: 1.25rem !important; /* 20px - Section subtitles */
+}
+
+.card-title {
+    font-size: 2rem !important; /* 32px - Card titles */
+}
+
+.card-subtitle {
+    font-size: 1.125rem !important; /* 18px - Card subtitles */
+}
+
+.hostel-title {
+    font-size: 1.5rem !important; /* 24px - Hostel titles */
+}
+
+.service-title {
+    font-size: 1.5rem !important; /* 24px - Service titles */
+}
+
+.contact-details h6 {
+    font-size: 1.25rem !important; /* 20px - Contact labels */
+}
+
+.contact-details p {
+    font-size: 1.0625rem !important; /* 17px - Contact details */
+}
+
+.form-control, .form-select {
+    font-size: 1.125rem !important; /* 18px - Form elements */
+}
+
+.btn {
+    font-size: 1.125rem !important; /* 18px - Buttons */
+}
+
+.badge {
+    font-size: 1rem !important; /* 16px - Badges */
+}
+
+.price-amount {
+    font-size: 1.25rem !important; /* 20px - Prices */
+}
+
+/* Search and Input Elements */
+.search-input,
+.search-button {
+    font-size: 1.125rem; /* 18px - Search elements */
+}
+
+/* Card Content */
+.card-body p {
+    font-size: 1.0625rem; /* 17px - Card descriptions */
+    line-height: 1.6;
+}

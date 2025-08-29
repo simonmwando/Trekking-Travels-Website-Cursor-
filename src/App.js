@@ -36,7 +36,7 @@ const HomePage = () => (
                 price={96}
                 image="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2070&q=80"
                 altText="Modern hostel lobby"
-              slug="11th-avenue-hostel"
+                slug="11th-avenue-hostel"
               />
             </div>
             <div className="col-lg-3 col-md-6 col-12 mb-4">

@@ -1,0 +1,167 @@
+.navbar-custom {
+  background: #156163;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  padding: 1.5rem 2rem; /* increased top/bottom and left/right padding */
+}
+
+.navbar-custom.scrolled {
+  background: #156163;
+  box-shadow: 0 2px 20px rgba(21, 97, 99, 0.3);
+  padding: 0.5rem 0;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white !important;
+  text-decoration: none;
+}
+
+.logo-image {
+  height: 38px; /* increased by another 15% from 33px */
+  width: auto;
+  max-width: 178px; /* increased by another 15% from 155px */
+  border: none;
+  outline: none;
+  display: block;
+  margin-top: 16px; /* move logo down a bit more */
+}
+
+.search-container {
+  flex: 1;
+  max-width: 300px;
+  margin: 0 2rem;
+}
+
+.search-input {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  color: #000000 !important;
+  border-radius: 999px; /* fully rounded corners */
+  height: 42px; /* reduced height by 25% from 56px */
+  width: 400px; /* increased width */
+  font-size: 2.125rem; /* increased font size by 25% from 1.7rem */
+  padding: 0 35px; /* increased padding for more breathing room */
+}
+
+.search-input::placeholder {
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.search-input:focus {
+  background-color: rgba(255, 255, 255, 1) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.2) !important;
+  color: #000000 !important;
+}
+
+.search-button {
+  border-radius: 50%; /* perfectly round icon button */
+  border: none;
+  background-color: transparent;
+  color: white;
+  transition: all 0.3s ease;
+  height: 42px; /* match new input height */
+  width: 42px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem; /* increased search icon size */
+}
+
+.search-button:hover {
+  background-color: transparent;
+  color: #FF7D00;
+}
+
+.navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-weight: 500;
+  font-size: 1.25rem; /* Same size as secondary navigation */
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #FF7D00 !important;
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link.active {
+  color: #FF7D00 !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-toggler {
+  border: none;
+  color: white;
+  /* Increase sandwich menu size by 2x */
+  transform: scale(2);
+  transform-origin: center;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Additional styling for the hamburger icon to ensure proper sizing */
+.navbar-toggler .fa-bars {
+  font-size: 1.5rem; /* Increase icon size */
+}
+
+/* Ensure the toggle button has enough space for the larger size */
+.navbar-toggler {
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-custom {
+    padding: 1.25rem 1.5rem; /* reduced padding for mobile */
+  }
+  
+  .search-container {
+    max-width: 100%;
+    margin: 1rem 0;
+  }
+  
+  .navbar-nav {
+    text-align: center;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 300px; /* Match search bar width */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .navbar-nav .nav-link {
+    margin: 0.5rem 0;
+  }
+  
+  /* Ensure search button is visible and properly sized on mobile */
+  .search-button {
+    display: flex !important;
+    height: 42px;
+    width: 42px;
+    font-size: 2.8rem;
+    margin-left: 10px;
+  }
+  
+  /* Adjust search input for mobile */
+  .search-input {
+    width: 100%;
+    max-width: 300px;
+    font-size: 1.5rem;
+  }
+}
